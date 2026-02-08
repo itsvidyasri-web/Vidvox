@@ -6,7 +6,6 @@
 <title>Vidya Sri K | Portfolio</title>
 
 <style>
-/* RESET */
 *{
   margin:0;
   padding:0;
@@ -15,7 +14,7 @@
   scroll-behavior:smooth;
 }
 
-/* BACKGROUND – LIGHT GLASS */
+/* BACKGROUND */
 body{
   min-height:100vh;
   background:
@@ -25,7 +24,7 @@ body{
   color:#111;
 }
 
-/* GLASS CARD */
+/* GLASS */
 .glass{
   background:rgba(255,255,255,0.6);
   backdrop-filter:blur(14px);
@@ -39,14 +38,12 @@ nav{
   margin:16px;
   padding:14px 20px;
 }
-
 nav ul{
   display:flex;
   justify-content:center;
   gap:22px;
   list-style:none;
 }
-
 nav a{
   text-decoration:none;
   color:#111;
@@ -64,64 +61,67 @@ section{
 
 h2{
   text-align:center;
-  margin-bottom:22px;
+  margin-bottom:26px;
   letter-spacing:2px;
 }
 
 /* HERO */
-.hero{
-  text-align:center;
-}
-
+.hero{text-align:center}
 .hero h1{
   font-size:44px;
   line-height:1.15;
   min-height:110px;
 }
-
-.hero h1 span{color:#999}
-
 .hero p{
   margin-top:12px;
   color:#555;
 }
-
 .hero img{
   width:230px;
   margin-top:36px;
+  border-radius:50%;
 }
 
 /* ABOUT */
 .about p{
-  max-width:560px;
-  margin:0 auto 28px;
+  max-width:600px;
+  margin:0 auto;
   color:#555;
   text-align:center;
+  line-height:1.6;
 }
 
-.about-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:18px;
-}
-
-.stat{
-  text-align:center;
-  padding:22px;
-}
-
-.stat h3{font-size:30px}
-
-/* CERTIFICATE */
-.certificate{
+/* SKILLS */
+.skills{
   display:flex;
   justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.skill{
+  padding:12px 22px;
+  border-radius:30px;
+  background:#fff;
+  font-size:14px;
 }
 
-.certificate img{
-  width:100%;
-  max-width:560px;
-  border-radius:14px;
+/* CERTIFICATIONS */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.cert{
+  padding:26px;
+}
+.cert h3{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+.cert p{
+  color:#555;
+  font-size:14px;
+  line-height:1.5;
 }
 
 /* PROJECTS */
@@ -130,30 +130,13 @@ h2{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;
 }
-
 .project{
   padding:26px;
   text-align:center;
 }
 
-/* EXPERIENCE */
-.exp{
-  display:flex;
-  justify-content:space-between;
-  padding:16px 20px;
-  margin-bottom:14px;
-  border-radius:30px;
-}
-
 /* CONTACT */
-.contact{
-  text-align:center;
-}
-
-.contact h1{
-  font-size:36px;
-}
-
+.contact{text-align:center}
 .links{
   margin-top:20px;
   display:flex;
@@ -161,7 +144,6 @@ h2{
   gap:14px;
   flex-wrap:wrap;
 }
-
 .links a{
   padding:10px 22px;
   border-radius:24px;
@@ -179,7 +161,6 @@ footer{
   font-size:13px;
 }
 
-/* MOBILE */
 @media(max-width:600px){
   .hero h1{font-size:36px}
 }
@@ -205,23 +186,90 @@ footer{
 
 <section class="about glass" id="about">
   <h2>ABOUT</h2>
-  <p>Creative IT student interested in UI/UX, Cloud, AI and modern web technologies.</p>
-  <div class="about-grid">
-    <div class="stat glass">
-      <h3>5+</h3>
-      <p>Successful Projects</p>
-    </div>
-    <div class="stat glass">
-      <h3>3</h3>
-      <p>Major Projects</p>
-    </div>
+  <p>
+    I'm Vidya Sri K, a B.Tech Information Technology student at Easa College of
+    Engineering and Technology, Coimbatore. Passionate about Artificial Intelligence,
+    Data Science, Cloud Computing, and Web Development.
+  </p>
+</section>
+
+<!-- SKILLS (menu-la illa) -->
+<section class="glass">
+  <h2>SKILLS</h2>
+  <div class="skills">
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">Python</div>
+    <div class="skill">Artificial Intelligence</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">Data Science</div>
+    <div class="skill">Microsoft Azure</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Salesforce</div>
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section class="glass">
-  <h2>CERTIFICATE</h2>
-  <div class="certificate">
-    <img src="certificate.png" alt="Certificate">
+  <h2>CERTIFICATIONS & LEARNING</h2>
+
+  <div class="cert-grid">
+
+    <div class="cert glass">
+      <h3>Machine Learning Using Python</h3>
+      <p>
+        Learned how machine learning models work, data preprocessing,
+        basic algorithms, and Python-based implementation concepts.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Introduction to Artificial Intelligence</h3>
+      <p>
+        Gained understanding of AI concepts, real-world applications,
+        and how intelligent systems solve problems.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Introduction to Data Science</h3>
+      <p>
+        Learned data analysis basics, data handling techniques,
+        and how data-driven decisions are made.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Microsoft Azure – Cloud Concepts</h3>
+      <p>
+        Understood cloud computing fundamentals, services,
+        deployment models, and real-world cloud usage.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Power BI Workshop</h3>
+      <p>
+        Learned how to create interactive dashboards,
+        visualize data, and generate meaningful insights.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Salesforce Training</h3>
+      <p>
+        Learned CRM fundamentals, business workflows,
+        and enterprise-level application concepts.
+      </p>
+    </div>
+
+    <div class="cert glass">
+      <h3>Design Fundamentals with AI</h3>
+      <p>
+        Learned UI/UX principles, design thinking,
+        and how AI supports creative design workflows.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -234,29 +282,19 @@ footer{
   </div>
 </section>
 
-<section class="glass">
-  <h2>EXPERIENCE</h2>
-  <div class="exp glass"><span>UI / UX Design</span><span>→</span></div>
-  <div class="exp glass"><span>Web Design</span><span>→</span></div>
-  <div class="exp glass"><span>Landing Page Design</span><span>→</span></div>
-  <div class="exp glass"><span>Mobile App Design</span><span>→</span></div>
-</section>
-
 <section class="contact glass" id="contact">
-  <h1>LET'S TALK</h1>
+  <h2>LET'S TALK</h2>
   <div class="links">
-    <a href="https://www.instagram.com/_._vidd_voxx_._?igsh=ZXdlaDN4Nm0yZ3Y5" target="_blank">Instagram</a>
+    <a href="mailto:itsvidyasri@gmail.com">Gmail</a>
     <a href="https://www.linkedin.com/in/vidya-sri-k-a37715390" target="_blank">LinkedIn</a>
-    <a href="tel:+919489166835">Call Me</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Vidya Sri K. All Rights Reserved.
+  © 2026 Vidya Sri K | IT Portfolio
 </footer>
 
 <script>
-/* TYPEWRITER ANIMATION */
 const text = "EXPLORE MY\nPORTFOLIO";
 const target = document.getElementById("typeText");
 let i = 0;
@@ -265,10 +303,9 @@ function type(){
   if(i < text.length){
     target.innerHTML += text[i] === "\n" ? "<br>" : text[i];
     i++;
-    setTimeout(type, 60); // fast typing
+    setTimeout(type, 60);
   }
 }
-
 type();
 </script>
 
