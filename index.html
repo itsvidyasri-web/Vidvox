@@ -33,7 +33,7 @@ nav{
 
 nav ul{
   display:flex;
-  gap:20px;
+  gap:22px;
   list-style:none;
 }
 
@@ -125,19 +125,19 @@ nav ul li a:hover{opacity:1}
   transform:translateY(-6px);
 }
 
-/* SERVICES */
-.services{
+/* EXPERIENCE */
+.experience{
   padding:60px 40px;
   background:#fafafa;
 }
 
-.service{
+.exp{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 20px;
+  padding:18px 22px;
   background:#fff;
-  margin-bottom:12px;
+  margin-bottom:14px;
   border-radius:40px;
   border:1px solid #eee;
 }
@@ -199,10 +199,11 @@ footer{
 <nav>
   <strong>PORTFOLIO</strong>
   <ul>
-    <li><a href="#home">Home</a></li>
+    <li><a href="#home">Portfolio</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects">Project</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact Us</a></li>
   </ul>
 </nav>
 
@@ -234,7 +235,7 @@ footer{
 </section>
 
 <section class="projects" id="projects">
-  <h2>FEATURED PROJECT</h2>
+  <h2>PROJECTS</h2>
   <div class="project-grid">
     <div class="project">Mobile App UI</div>
     <div class="project">Web Design</div>
@@ -242,12 +243,12 @@ footer{
   </div>
 </section>
 
-<section class="services" id="services">
-  <h2>SERVICES</h2>
-  <div class="service"><span>UI/UX Design</span><span>→</span></div>
-  <div class="service"><span>Web Design</span><span>→</span></div>
-  <div class="service"><span>Landing Pages</span><span>→</span></div>
-  <div class="service"><span>Mobile App Design</span><span>→</span></div>
+<section class="experience" id="experience">
+  <h2>EXPERIENCE</h2>
+  <div class="exp"><span>UI/UX Design</span><span>→</span></div>
+  <div class="exp"><span>Web Design</span><span>→</span></div>
+  <div class="exp"><span>Landing Page Design</span><span>→</span></div>
+  <div class="exp"><span>Mobile App Design</span><span>→</span></div>
 </section>
 
 <section class="contact" id="contact">
@@ -264,8 +265,8 @@ footer{
 </footer>
 
 <script>
-document.querySelectorAll('.service').forEach(s=>{
-  s.addEventListener('click',()=>s.classList.toggle('active'))
+document.querySelectorAll('.exp').forEach(e=>{
+  e.addEventListener('click',()=>e.classList.toggle('active'));
 });
 </script>
 
