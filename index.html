@@ -11,6 +11,7 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
@@ -36,13 +37,14 @@ nav ul{
   list-style:none;
 }
 
-nav ul li{
+nav ul li a{
   font-size:14px;
-  cursor:pointer;
+  text-decoration:none;
+  color:#111;
   opacity:0.7;
 }
 
-nav ul li:hover{opacity:1}
+nav ul li a:hover{opacity:1}
 
 /* HERO */
 .hero{
@@ -73,7 +75,7 @@ nav ul li:hover{opacity:1}
   width:100%;
   max-width:380px;
   border-radius:50%;
-  filter:grayscale(100%);
+  object-fit:cover;
 }
 
 /* ABOUT */
@@ -84,7 +86,7 @@ nav ul li:hover{opacity:1}
 
 .about-grid{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:20px;
   margin-top:30px;
 }
@@ -167,6 +169,15 @@ nav ul li:hover{opacity:1}
   cursor:pointer;
 }
 
+/* FOOTER */
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:15px;
+  font-size:14px;
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{
@@ -188,14 +199,14 @@ nav ul li:hover{opacity:1}
 <nav>
   <strong>PORTFOLIO</strong>
   <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Services</li>
-    <li>Projects</li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
   </ul>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
   <div>
     <h1>EXPLORE <span>MY</span><br>PORTFOLIO</h1>
     <p>I am passionate about creating modern websites that stand out from the crowd.</p>
@@ -203,7 +214,7 @@ nav ul li:hover{opacity:1}
   <img src="photo.png" alt="profile">
 </section>
 
-<section class="about">
+<section class="about" id="about">
   <h2>ABOUT</h2>
   <p>Creative IT student with strong interest in UI/UX, data and modern web design.</p>
   <div class="about-grid">
@@ -222,7 +233,7 @@ nav ul li:hover{opacity:1}
   </div>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
   <h2>FEATURED PROJECT</h2>
   <div class="project-grid">
     <div class="project">Mobile App UI</div>
@@ -231,7 +242,7 @@ nav ul li:hover{opacity:1}
   </div>
 </section>
 
-<section class="services">
+<section class="services" id="services">
   <h2>SERVICES</h2>
   <div class="service"><span>UI/UX Design</span><span>→</span></div>
   <div class="service"><span>Web Design</span><span>→</span></div>
@@ -239,7 +250,7 @@ nav ul li:hover{opacity:1}
   <div class="service"><span>Mobile App Design</span><span>→</span></div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h1>LET'S TALK</h1>
   <div class="btns">
     <button>Instagram</button>
@@ -248,10 +259,14 @@ nav ul li:hover{opacity:1}
   </div>
 </section>
 
+<footer>
+  © 2026 Vidya Sri K. All Rights Reserved.
+</footer>
+
 <script>
 document.querySelectorAll('.service').forEach(s=>{
   s.addEventListener('click',()=>s.classList.toggle('active'))
-})
+});
 </script>
 
 </body>
