@@ -1,1 +1,184 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vidya Sri K | Portfolio</title>
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+/* ===== GLASS CARD ===== */
+.container{
+  width:90%;
+  max-width:900px;
+  padding:40px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border:1px solid rgba(255,255,255,0.25);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.header img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,0.6);
+  object-fit:cover;
+}
+
+.header h1{
+  font-size:32px;
+}
+
+.header p{
+  opacity:0.9;
+  margin-top:5px;
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  margin-top:30px;
+}
+
+.section h2{
+  font-size:22px;
+  margin-bottom:12px;
+  position:relative;
+}
+
+.section h2::after{
+  content:'';
+  width:50px;
+  height:3px;
+  background:#00ffd5;
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  border-radius:10px;
+}
+
+.skills, .cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.skill, .card{
+  padding:15px;
+  border-radius:14px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  text-align:center;
+  transition:0.3s;
+}
+
+.skill:hover, .card:hover{
+  transform:translateY(-6px) scale(1.03);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  margin-top:35px;
+  text-align:center;
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* ===== ANIMATION ===== */
+.fade{
+  animation:fadeUp 1s ease forwards;
+  opacity:0;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+<div class="container fade">
+  <div class="header">
+    <img src="photo.png" alt="Profile">
+    <div>
+      <h1>Vidya Sri K</h1>
+      <p>B.Tech IT Student | Aspiring Tech Professional</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      Passionate about technology, design, and data. Interested in building
+      modern digital solutions with clean UI and strong logic.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Python</div>
+      <div class="skill">AI & ML</div>
+      <div class="skill">Data Science</div>
+      <div class="skill">Cloud</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Salesforce</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <div class="cards">
+      <div class="card">Machine Learning Using Python</div>
+      <div class="card">Introduction to AI</div>
+      <div class="card">Introduction to Data Science</div>
+      <div class="card">Microsoft Azure – Cloud</div>
+      <div class="card">Power BI Workshop</div>
+      <div class="card">Salesforce Training</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Vidya Sri K • Portfolio
+  </footer>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelector('.container').classList.add('fade');
+});
+</script>
+</body>
+</html>
